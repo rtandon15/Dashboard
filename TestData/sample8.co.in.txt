@@ -1,0 +1,5 @@
+sample8.co.in.	86400	IN	SOA	bdns1.ultradns.net. rajat\.tandon.neustar.biz. 2015062601 86400 86400 86400 86400
+sample8.co.in.	86400	IN	NS	bdns4.ultradns.net.
+sample8.co.in.	86400	IN	NS	bdns3.ultradns.net.
+sample8.co.in.	86400	IN	NS	bdns2.ultradns.net.
+sample8.co.in.	86400	IN	NS	bdns1.ultradns.net.

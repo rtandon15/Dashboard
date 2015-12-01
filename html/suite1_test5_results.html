@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - TA_Regression_test-5</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>TA_Regression_test-5</h1>
+<p>
+  Test duration: 1705.949s
+</p>
+
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">com.test.PlatformOne.PlatformOneLoginLogoutTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="PLAT-156_TC_096 : The test verifies Notification Self-Dimissal Time.">verifyNotificationSelfDimissalTime</span>
+      </td>
+  <td class="duration">
+    90.921s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Click Login Button]</b><br>
+                                >        Step-2:Clicking on LOGIN button.<br>
+                                >        Step-3:Click "css=button.btn.btn-primary"<br>
+                                <b>Step: [Verify Authentication Message]</b><br>
+                                >        Step-4:Verifying message: Authentication failed. For security reasons, your account may become locked if excessive failed logins are detected.<br>
+                                >        Step-5:<font color='red'>"//p[@ng-repeat='message in messageSet.messages'][contains(.,'Authentication failed. For security reasons')]" not found on page, Wait:60
+Error:  </font> <a href="file:/C:/Snapshots/npp-automation/Snapshot_2015050516433731712chrome.png" target=_blank>Snapshot</a> <a href="file:/C:/Snapshots/npp-automation/Snapshot_2015050516433731712chrome.html" target=_blank>html</a><br>
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.Error: &lt;font color=&apos;red&apos;&gt;&quot;//p[@ng-repeat=&apos;message in messageSet.messages&apos;][contains(.,&apos;Authentication failed. For security reasons&apos;)]&quot; not found on page, Wait:60<br/>
+Error:&nbsp; &lt;/font&gt; &lt;a href=&quot;file:/C:/Snapshots/npp-automation/Snapshot_2015050516433731712chrome.png&quot; target=_blank&gt;Snapshot&lt;/a&gt; &lt;a href=&quot;file:/C:/Snapshots/npp-automation/Snapshot_2015050516433731712chrome.html&quot; target=_blank&gt;html&lt;/a&gt;</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              com.saf.global.ActionMethods.logWithScreenshot(ActionMethods.java:809)<br />
+              com.saf.global.ActionMethods.fail(ActionMethods.java:199)<br />
+              com.saf.global.ActionMethods.waitForElement(ActionMethods.java:1346)<br />
+              com.saf.global.ActionMethods.waitForElement(ActionMethods.java:1293)<br />
+              com.NPP.PlatformOne.PlatformOneLoginLogout.verifyAuthenticationMessage(PlatformOneLoginLogout.java:65)<br />
+              com.test.PlatformOne.PlatformOneLoginLogoutTest.verifyNotificationSelfDimissalTime(PlatformOneLoginLogoutTest.java:131)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+              java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)<br />
+              java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)<br />
+              java.lang.Thread.run(Unknown Source)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="The test verifies the Reset Password functionality with no email id.">verifyResetPasswordWithNoEmail</span>
+      </td>
+  <td class="duration">
+    97.064s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Click Forgot Your Password Link]</b><br>
+                                >        Step-2:Clicking on Forgot your password link.<br>
+                                >        Step-3:Click "//a[contains(.,'Forgot')]"<br>
+                                <b>Step: [Enter Reset Password Email]</b><br>
+                                >        Step-4:Entering the email id.<br>
+                                >        Step-5:Type "" in "//div[@ng-show='showPasswordReset']//label[@for='inputEmail']//following-sibling::input"<br>
+                                <b>Step: [Click Submit Button]</b><br>
+                                >        Step-6:Clicking on Submit Button.<br>
+                                >        Step-7:Click "//button[@class='btn btn-primary ']"<br>
+                                <b>Step: [Verify Authentication Message]</b><br>
+                                >        Step-8:Verifying message: Please enter a valid email address.<br>
+                                >        Step-9:<font color='red'>"//p[@ng-repeat='message in messageSet.messages'][contains(.,'Please enter a valid email address.')]" not found on page, Wait:60
+Error:  </font> <a href="file:/C:/Snapshots/npp-automation/Snapshot_2015050516434255113chrome.png" target=_blank>Snapshot</a> <a href="file:/C:/Snapshots/npp-automation/Snapshot_2015050516434255113chrome.html" target=_blank>html</a><br>
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.Error: &lt;font color=&apos;red&apos;&gt;&quot;//p[@ng-repeat=&apos;message in messageSet.messages&apos;][contains(.,&apos;Please enter a valid email address.&apos;)]&quot; not found on page, Wait:60<br/>
+Error:&nbsp; &lt;/font&gt; &lt;a href=&quot;file:/C:/Snapshots/npp-automation/Snapshot_2015050516434255113chrome.png&quot; target=_blank&gt;Snapshot&lt;/a&gt; &lt;a href=&quot;file:/C:/Snapshots/npp-automation/Snapshot_2015050516434255113chrome.html&quot; target=_blank&gt;html&lt;/a&gt;</b></a><br />
+    <div class="stackTrace" id="exception-1">
+              com.saf.global.ActionMethods.logWithScreenshot(ActionMethods.java:809)<br />
+              com.saf.global.ActionMethods.fail(ActionMethods.java:199)<br />
+              com.saf.global.ActionMethods.waitForElement(ActionMethods.java:1346)<br />
+              com.saf.global.ActionMethods.waitForElement(ActionMethods.java:1293)<br />
+              com.NPP.PlatformOne.PlatformOneLoginLogout.verifyAuthenticationMessage(PlatformOneLoginLogout.java:65)<br />
+              com.test.PlatformOne.PlatformOneLoginLogoutTest.verifyResetPasswordWithNoEmail(PlatformOneLoginLogoutTest.java:107)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+              java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)<br />
+              java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)<br />
+              java.lang.Thread.run(Unknown Source)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="The test verifies the Reset Password functionality with valid email id.">verifyResetPasswordWithValidEmail</span>
+      </td>
+  <td class="duration">
+    97.562s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Click Forgot Your Password Link]</b><br>
+                                >        Step-2:Clicking on Forgot your password link.<br>
+                                >        Step-3:Click "//a[contains(.,'Forgot')]"<br>
+                                <b>Step: [Enter Reset Password Email]</b><br>
+                                >        Step-4:Entering the email id.<br>
+                                >        Step-5:Type "zaid.momin@neustar.biz" in "//div[@ng-show='showPasswordReset']//label[@for='inputEmail']//following-sibling::input"<br>
+                                <b>Step: [Click Submit Button]</b><br>
+                                >        Step-6:Clicking on Submit Button.<br>
+                                >        Step-7:Click "//button[@class='btn btn-primary ']"<br>
+                                <b>Step: [Verify Authentication Message]</b><br>
+                                >        Step-8:Verifying message: A password reset email will be sent to your inbox<br>
+                                >        Step-9:<font color='red'>"//p[@ng-repeat='message in messageSet.messages'][contains(.,'A password reset email will be sent to your inbox')]" not found on page, Wait:60
+Error:  </font> <a href="file:/C:/Snapshots/npp-automation/Snapshot_2015050516421596411chrome.png" target=_blank>Snapshot</a> <a href="file:/C:/Snapshots/npp-automation/Snapshot_2015050516421596411chrome.html" target=_blank>html</a><br>
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.Error: &lt;font color=&apos;red&apos;&gt;&quot;//p[@ng-repeat=&apos;message in messageSet.messages&apos;][contains(.,&apos;A password reset email will be sent to your inbox&apos;)]&quot; not found on page, Wait:60<br/>
+Error:&nbsp; &lt;/font&gt; &lt;a href=&quot;file:/C:/Snapshots/npp-automation/Snapshot_2015050516421596411chrome.png&quot; target=_blank&gt;Snapshot&lt;/a&gt; &lt;a href=&quot;file:/C:/Snapshots/npp-automation/Snapshot_2015050516421596411chrome.html&quot; target=_blank&gt;html&lt;/a&gt;</b></a><br />
+    <div class="stackTrace" id="exception-2">
+              com.saf.global.ActionMethods.logWithScreenshot(ActionMethods.java:809)<br />
+              com.saf.global.ActionMethods.fail(ActionMethods.java:199)<br />
+              com.saf.global.ActionMethods.waitForElement(ActionMethods.java:1346)<br />
+              com.saf.global.ActionMethods.waitForElement(ActionMethods.java:1293)<br />
+              com.NPP.PlatformOne.PlatformOneLoginLogout.verifyAuthenticationMessage(PlatformOneLoginLogout.java:65)<br />
+              com.test.PlatformOne.PlatformOneLoginLogoutTest.verifyResetPasswordWithValidEmail(PlatformOneLoginLogoutTest.java:89)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+              java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)<br />
+              java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)<br />
+              java.lang.Thread.run(Unknown Source)<br />
+                </div>
+      </td>
+</tr>
+      </table>
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">com.test.PlatformOne.PlatformOneLoginLogoutTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="TC_145 : The test verifies the invalid email entered at Reset Page  and the error message are carried to Login Page after hitting the Submit Button .">verifyBackToLoginFunctionalityWithInvalidEmailAndWithSubmitButtonHit</span>
+      </td>
+  <td class="duration">
+    25.745s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Click Forgot Your Password Link]</b><br>
+                                >        Step-2:Clicking on Forgot your password link.<br>
+                                >        Step-3:Click "//a[contains(.,'Forgot')]"<br>
+                                <b>Step: [Enter Reset Password Email]</b><br>
+                                >        Step-4:Entering the email id.<br>
+                                >        Step-5:Type "InvalidEmailFormat.com" in "//div[@ng-show='showPasswordReset']//label[@for='inputEmail']//following-sibling::input"<br>
+                                <b>Step: [Click Submit Button]</b><br>
+                                >        Step-6:Clicking on Submit Button.<br>
+                                >        Step-7:Click "//button[@class='btn btn-primary ']"<br>
+                                <b>Step: [Verify Invalid Email Error Message]</b><br>
+                                >        Step-8:Verifying Invalid Email Entered Message.<br>
+                                <b>Step: [Click Back To Login Link]</b><br>
+                                >        Step-9:Clicking on Back to Login Link.<br>
+                                >        Step-10:Click "//button[@class='btn btn-primary ']//following-sibling::a"<br>
+                                <b>Step: [Verify Back To Login Functionality With Invalid Email And With Submit Button Hit]</b><br>
+                                >        Step-11:"value" attribute for "id=inputEmail" is "InvalidEmailFormat.com"<br>
+                                >        Step-12:Actual Text : "InvalidEmailFormat.com" matches with ,  Expected Text : "InvalidEmailFormat.com"<br>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC_145 : The test verifies the invalid email entered at Reset Page is carried to Login Page without hitting the Submit Button .">verifyBackToLoginFunctionalityWithInvalidEmailAndWithoutSubmitButtonHit</span>
+      </td>
+  <td class="duration">
+    17.335s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Click Forgot Your Password Link]</b><br>
+                                >        Step-2:Clicking on Forgot your password link.<br>
+                                >        Step-3:Click "//a[contains(.,'Forgot')]"<br>
+                                <b>Step: [Enter Reset Password Email]</b><br>
+                                >        Step-4:Entering the email id.<br>
+                                >        Step-5:Type "InvalidEmailFormat.com" in "//div[@ng-show='showPasswordReset']//label[@for='inputEmail']//following-sibling::input"<br>
+                                <b>Step: [Click Back To Login Link]</b><br>
+                                >        Step-6:Clicking on Back to Login Link.<br>
+                                >        Step-7:Click "//button[@class='btn btn-primary ']//following-sibling::a"<br>
+                                <b>Step: [Verify Back To Login Functionality With Invalid Email And Without Submit Button Hit]</b><br>
+                                >        Step-8:"value" attribute for "id=inputEmail" is "InvalidEmailFormat.com"<br>
+                                >        Step-9:Actual Text : "InvalidEmailFormat.com" matches with ,  Expected Text : "InvalidEmailFormat.com"<br>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="The test verifies the Login Functionality with invalid email and invalid password.">verifyLoginFunctionalityWithInvalidEmailAndInValidPassword</span>
+      </td>
+  <td class="duration">
+    11.836s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Platform One Login]</b><br>
+                                >        Step-2:Entering the Email. <br>
+                                >        Step-3:Type "email.invalid@test.com" in "id=inputEmail"<br>
+                                >        Step-4:Entering the Password. <br>
+                                >        Step-5:Type "password.invalid@test.com" in "id=inputPassword"<br>
+                                >        Step-6:Clicking on LOGIN button.<br>
+                                >        Step-7:Click "css=button.btn.btn-primary"<br>
+                                >        Step-8:Pause: 3 secs<br>
+                                <b>Step: [Verify Authentication Message]</b><br>
+                                >        Step-9:Verifying message: Authentication failed. For security reasons, your account may become locked if excessive failed logins are detected.<br>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="The test verifies the Login Functionality with invalid email and valid password.">verifyLoginFunctionalityWithInvalidEmailAndValidPassword</span>
+      </td>
+  <td class="duration">
+    11.726s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Platform One Login]</b><br>
+                                >        Step-2:Entering the Email. <br>
+                                >        Step-3:Type "email.invalid@test.com" in "id=inputEmail"<br>
+                                >        Step-4:Entering the Password. <br>
+                                >        Step-5:Type "Neustar1!" in "id=inputPassword"<br>
+                                >        Step-6:Clicking on LOGIN button.<br>
+                                >        Step-7:Click "css=button.btn.btn-primary"<br>
+                                >        Step-8:Pause: 3 secs<br>
+                                <b>Step: [Verify Authentication Message]</b><br>
+                                >        Step-9:Verifying message: Authentication failed. For security reasons, your account may become locked if excessive failed logins are detected.<br>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="The test verifies the Login Functionality with invalid email format and valid password.">verifyLoginFunctionalityWithInvalidEmailFormatAndValidPassword</span>
+      </td>
+  <td class="duration">
+    23.721s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Platform One Login]</b><br>
+                                >        Step-2:Entering the Email. <br>
+                                >        Step-3:Type "InvalidEmailFormat.com" in "id=inputEmail"<br>
+                                >        Step-4:Entering the Password. <br>
+                                >        Step-5:Type "Neustar1!" in "id=inputPassword"<br>
+                                >        Step-6:Clicking on LOGIN button.<br>
+                                >        Step-7:Click "css=button.btn.btn-primary"<br>
+                                >        Step-8:Pause: 3 secs<br>
+                                <b>Step: [Verify Login Functionality With Invalid Email Format And Valid Password]</b><br>
+                                >        Step-9:GetText from Element: "//div[@ng-show='showLogin']//input[@id='inputEmail']//following-sibling::div", Invalid email entered<br>
+                                >        Step-10:Expected Text : "Invalid email entered" displayed in Section ://div[@ng-show='showLogin']//input[@id='inputEmail']//following-sibling::div<br>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="The test verifies the Login Functionality with no email and no password.">verifyLoginFunctionalityWithNoEmailAndNoPassword</span>
+      </td>
+  <td class="duration">
+    11.637s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Platform One Login]</b><br>
+                                >        Step-2:Entering the Email. <br>
+                                >        Step-3:Type "" in "id=inputEmail"<br>
+                                >        Step-4:Entering the Password. <br>
+                                >        Step-5:Type "" in "id=inputPassword"<br>
+                                >        Step-6:Clicking on LOGIN button.<br>
+                                >        Step-7:Click "css=button.btn.btn-primary"<br>
+                                >        Step-8:Pause: 3 secs<br>
+                                <b>Step: [Verify Authentication Message]</b><br>
+                                >        Step-9:Verifying message: Authentication failed. For security reasons, your account may become locked if excessive failed logins are detected.<br>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="The test verifies the Login Functionality with valid email and invalid password.">verifyLoginFunctionalityWithValidEmailAndInvalidPassword</span>
+      </td>
+  <td class="duration">
+    11.836s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Platform One Login]</b><br>
+                                >        Step-2:Entering the Email. <br>
+                                >        Step-3:Type "zaid.momin@neustar.biz" in "id=inputEmail"<br>
+                                >        Step-4:Entering the Password. <br>
+                                >        Step-5:Type "password.invalid@test.com" in "id=inputPassword"<br>
+                                >        Step-6:Clicking on LOGIN button.<br>
+                                >        Step-7:Click "css=button.btn.btn-primary"<br>
+                                >        Step-8:Pause: 3 secs<br>
+                                <b>Step: [Verify Authentication Message]</b><br>
+                                >        Step-9:Verifying message: Authentication failed. For security reasons, your account may become locked if excessive failed logins are detected.<br>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="The test verifies the Login Functionality with valid email and valid password and then Logs out.">verifyLoginFunctionalityWithValidEmailAndValidPassword</span>
+      </td>
+  <td class="duration">
+    18.578s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Platform One Login]</b><br>
+                                >        Step-2:Entering the Email. <br>
+                                >        Step-3:Type "zaid.momin@neustar.biz" in "id=inputEmail"<br>
+                                >        Step-4:Entering the Password. <br>
+                                >        Step-5:Type "Neustar1!" in "id=inputPassword"<br>
+                                >        Step-6:Clicking on LOGIN button.<br>
+                                >        Step-7:Click "css=button.btn.btn-primary"<br>
+                                >        Step-8:Pause: 3 secs<br>
+                                <b>Step: [Platform One Logout]</b><br>
+                                >        Step-9:Clicking on Profile Icon Arrow Link. <br>
+                                >        Step-10:Click "//span[@class='nuxicon nuxicon-trending-down']"<br>
+                                >        Step-11:Pause: 2 secs<br>
+                                >        Step-12:Clicking on LOGOUT Link. <br>
+                                >        Step-13:Click "link=Logout"<br>
+                                <b>Step: [Verify Authentication Message]</b><br>
+                                >        Step-14:Verifying message: You have logged out successfully.<br>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="The test verifies the Login Page text and all its elements.">verifyLoginPageTextAndItsElements</span>
+      </td>
+  <td class="duration">
+    14.069s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Verify Login Page]</b><br>
+                                >        Step-2:Verifying all the Login Page Elements<br>
+                                >        Step-3:GetText from Element: "//*[@id='ng-app']/body/div/div/div[2]/ng-view/div/div/div/div[1]/div[1]/div[1]/h3", Accurate data.
+Personalized dialogue.<br>
+                                >        Step-4:Actual Text : "Accurate data.Personalized dialogue." matches with ,  Expected Text : "Accurate data.Personalized dialogue."<br>
+                                >        Step-5:GetText from Element: "//*[@id='ng-app']/body/div/div/div[2]/ng-view/div/div/div/div[1]/div[1]/div[1]/p[1]", A centralized marketing solution that gives you a complete, accurate, real-time portrait of your customer—and enables real-time activation of customer and media intelligence.<br>
+                                <b>Step: [Verify Text Contains]</b><br>
+                                >        Step-6:Actual Text : "A centralized marketing solution that gives you a complete, accurate, real-time portrait of your customer" does not contains ,  Text : "A centralized marketing solution that gives you a complete, accurate, real-time portrait of your customer—and enables real-time activation of customer and media intelligence."<br>
+                                >        Step-7:Actual Text : "and enables real-time activation of customer and media intelligence." does not contains ,  Text : "A centralized marketing solution that gives you a complete, accurate, real-time portrait of your customer—and enables real-time activation of customer and media intelligence."<br>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="The test verifies the Back to Login Functionality from Reset Password Page">verifyResetPasswordBackToLogin</span>
+      </td>
+  <td class="duration">
+    30.524s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Click Forgot Your Password Link]</b><br>
+                                >        Step-2:Clicking on Forgot your password link.<br>
+                                >        Step-3:Click "//a[contains(.,'Forgot')]"<br>
+                                <b>Step: [Enter Reset Password Email]</b><br>
+                                >        Step-4:Entering the email id.<br>
+                                >        Step-5:Type "zaid.momin@neustar.biz" in "//div[@ng-show='showPasswordReset']//label[@for='inputEmail']//following-sibling::input"<br>
+                                <b>Step: [Click Back To Login Link]</b><br>
+                                >        Step-6:Clicking on Back to Login Link.<br>
+                                >        Step-7:Click "//button[@class='btn btn-primary ']//following-sibling::a"<br>
+                                <b>Step: [Verify Login Page]</b><br>
+                                >        Step-8:Verifying all the Login Page Elements<br>
+                                >        Step-9:GetText from Element: "//*[@id='ng-app']/body/div/div/div[2]/ng-view/div/div/div/div[1]/div[1]/div[1]/h3", Accurate data.
+Personalized dialogue.<br>
+                                >        Step-10:Actual Text : "Accurate data.Personalized dialogue." matches with ,  Expected Text : "Accurate data.Personalized dialogue."<br>
+                                >        Step-11:GetText from Element: "//*[@id='ng-app']/body/div/div/div[2]/ng-view/div/div/div/div[1]/div[1]/div[1]/p[1]", A centralized marketing solution that gives you a complete, accurate, real-time portrait of your customer—and enables real-time activation of customer and media intelligence.<br>
+                                <b>Step: [Verify Text Contains]</b><br>
+                                >        Step-12:Actual Text : "A centralized marketing solution that gives you a complete, accurate, real-time portrait of your customer" does not contains ,  Text : "A centralized marketing solution that gives you a complete, accurate, real-time portrait of your customer—and enables real-time activation of customer and media intelligence."<br>
+                                >        Step-13:Actual Text : "and enables real-time activation of customer and media intelligence." does not contains ,  Text : "A centralized marketing solution that gives you a complete, accurate, real-time portrait of your customer—and enables real-time activation of customer and media intelligence."<br>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="The test verifies the Reset Password Page text and all its elements.">verifyResetPasswordTextAndItsElements</span>
+      </td>
+  <td class="duration">
+    12.307s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Click Forgot Your Password Link]</b><br>
+                                >        Step-2:Clicking on Forgot your password link.<br>
+                                >        Step-3:Click "//a[contains(.,'Forgot')]"<br>
+                                <b>Step: [Verify Reset Password Page]</b><br>
+                                >        Step-4:Verifying all the Reset Password Page elements and the page text.<br>
+                                >        Step-5:GetText from Element: "//p[@class='help-block']", Forgot your password? Enter the e-mail address you have on file to receive an e-mail with instructions on how to change your password.<br>
+                                >        Step-6:Actual Text : "Forgot your password? Enter the e-mail address you have on file to receive an e-mail with instructions on how to change your password." matches with ,  Expected Text : "Forgot your password? Enter the e-mail address you have on file to receive an e-mail with instructions on how to change your password."<br>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="The test verifies the Reset Password functionality with invalid email id.">verifyResetPasswordWithInvalidEmail</span>
+      </td>
+  <td class="duration">
+    16.343s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Click Forgot Your Password Link]</b><br>
+                                >        Step-2:Clicking on Forgot your password link.<br>
+                                >        Step-3:Click "//a[contains(.,'Forgot')]"<br>
+                                <b>Step: [Enter Reset Password Email]</b><br>
+                                >        Step-4:Entering the email id.<br>
+                                >        Step-5:Type "InvalidEmailFormat.com" in "//div[@ng-show='showPasswordReset']//label[@for='inputEmail']//following-sibling::input"<br>
+                                <b>Step: [Click Submit Button]</b><br>
+                                >        Step-6:Clicking on Submit Button.<br>
+                                >        Step-7:Click "//button[@class='btn btn-primary ']"<br>
+                                <b>Step: [Verify Invalid Email Error Message]</b><br>
+                                >        Step-8:Verifying Invalid Email Entered Message.<br>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC_147 : The test verifies the Reset Password functionality with special characters as email id.">verifyResetPasswordWithSpecialCharactersAsEmail</span>
+      </td>
+  <td class="duration">
+    16.344s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <b>Step: [Click Forgot Your Password Link]</b><br>
+                                >        Step-2:Clicking on Forgot your password link.<br>
+                                >        Step-3:Click "//a[contains(.,'Forgot')]"<br>
+                                <b>Step: [Enter Reset Password Email]</b><br>
+                                >        Step-4:Entering the email id.<br>
+                                >        Step-5:Type "$!$%&*" in "//div[@ng-show='showPasswordReset']//label[@for='inputEmail']//following-sibling::input"<br>
+                                <b>Step: [Click Submit Button]</b><br>
+                                >        Step-6:Clicking on Submit Button.<br>
+                                >        Step-7:Click "//button[@class='btn btn-primary ']"<br>
+                                <b>Step: [Verify Invalid Email Error Message]</b><br>
+                                >        Step-8:Verifying Invalid Email Entered Message.<br>
+                  </div>
+    
+
+      </td>
+</tr>
+      </table>
+  
+</body>
+</html>
