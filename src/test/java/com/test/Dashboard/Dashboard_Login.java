@@ -1,10 +1,13 @@
 package com.test.Dashboard;
 
+import java.util.Properties;
+
 import org.testng.annotations.Test;
 
 import com.Dashboard.data.Dashboard_BaseData;
 import com.Dashboard.global.DashboardPageFactory;
 import com.Dashboard.global.TestGroups;
+import com.saf.global.LoadProperties;
 
 public class Dashboard_Login extends DashboardPageFactory {
 
@@ -21,6 +24,7 @@ public class Dashboard_Login extends DashboardPageFactory {
 		Dashboard_HyattPage().clickingReviewValue();
 		pause(3);
 		DashboardLoginPage().verifyReviewMessage("rooms","nice","clean","no one said it was impossible","lady in the frontdesk");
+//		LoadProperties.reviewsValidation("HyattReview");
 		Dashboard_HyattPage().clickCloseReview();
 		DashboardLoginPage().dashboardLogout();
 
