@@ -2,6 +2,7 @@ package com.test.Dashboard;
 
 import java.util.Properties;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.Dashboard.data.Dashboard_BaseData;
@@ -23,10 +24,13 @@ public class Dashboard_Login extends DashboardPageFactory {
 		Dashboard_HyattPage().clickApplyButton();
 		Dashboard_HyattPage().clickingReviewValue();
 		pause(3);
-		DashboardLoginPage().verifyReviewMessage("rooms","nice","clean","no one said it was impossible","lady in the frontdesk");
-//		LoadProperties.reviewsValidation("HyattReview");
+//		DashboardLoginPage().verifyReviewMessage("rooms","nice","clean","no one said it was impossible","lady in the frontdesk");
+		String ExpectedMessage=LoadProperties.reviewsValidation("HyattReview");
+		System.out.println("ExpectedReview" +ExpectedMessage);
+		String ActualMessage=DashboardLoginPage().gettingActualReviewMessage();
+		System.out.println("ActualMessage" +ActualMessage);
+		isTextMatching(ExpectedMessage,ActualMessage);		
 		Dashboard_HyattPage().clickCloseReview();
 		DashboardLoginPage().dashboardLogout();
-
 	}
 }

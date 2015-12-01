@@ -59,7 +59,7 @@ public class LoadProperties {
 		if (ReviewProperty == null) {
 			try {
 				ReviewProperty = new Properties();
-				ReviewProperty.load(new FileReader("Reviews-Validate.properties"));
+				ReviewProperty.load(new FileReader("ReviewsValidate.properties"));
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {

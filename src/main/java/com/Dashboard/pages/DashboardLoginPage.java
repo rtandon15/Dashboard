@@ -24,8 +24,16 @@ public class DashboardLoginPage extends DashboardWebElementLocators {
 	public void verifyReviewMessage(Object... params) {
 		for (Object Message : params) {
 			log("Verifying message :" + Message);
-			waitForElement(Dashboard_Reviews_Message_Locator.format(Message.toString()));
+			waitForElement(Dashboard_Reviews_Message_Locator.format(Message
+					.toString()));
 		}
 	}
-	
+
+	public String gettingActualReviewMessage() {
+//		String ActualMessage = getAttribute(Dashboard_Review1_Locator, "value").toString().trim();
+		String ActualMessage = getText(Dashboard_Review1_Locator);
+		put("ActualMessage", ActualMessage);
+		return ActualMessage;
+	}
+
 }
