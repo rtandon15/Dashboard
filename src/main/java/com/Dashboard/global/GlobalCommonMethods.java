@@ -3,6 +3,7 @@ package com.Dashboard.global;
 import java.awt.AWTException;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
@@ -16,6 +17,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Properties;
 import java.util.Random;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -67,6 +69,19 @@ public class GlobalCommonMethods extends Global {
 		tDate = dateFormat.format(date);
 		return tDate;
 	}
+	
+	Properties prop = new Properties();
+
+	public Properties loadProperties() {
+		try {
+			// load a properties file
+			prop.load(new FileInputStream("Reviews-Validate.properties"));
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+		return prop;
+	}
+
 
 	// CLOSING THE WINDOW AND BEING SWITCHED BACK TO SPECIFIED WINDOW
 	public void ClosingNewWindowAndSwitchBack(String Winhandle) {
