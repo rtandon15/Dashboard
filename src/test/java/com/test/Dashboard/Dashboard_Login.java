@@ -24,7 +24,8 @@ public class Dashboard_Login extends DashboardPageFactory {
 		Dashboard_HyattPage().clickApplyButton();
 		Dashboard_HyattPage().clickingReviewValue();
 		pause(3);
-		// DashboardLoginPage().verifyReviewMessage("rooms","nice","clean","no one said it was impossible","lady in the frontdesk");
+		DashboardLoginPage().verifyReviewMessage("rooms", "nice", "clean",
+				"no one said it was impossible", "lady in the frontdesk");
 		String ExpectedMessage = LoadProperties
 				.reviewsValidation("HyattReview");
 		System.out.println("ExpectedMessage: " + ExpectedMessage);
@@ -37,7 +38,7 @@ public class Dashboard_Login extends DashboardPageFactory {
 	}
 
 	@Test(groups = { TestGroups.RegressionGroup, TestGroups.ALLGroup }, description = "The test case verifies Alert created is available under Warning. ")
-	public void verifyAssertPresentOnCreation() throws Exception {
+	public void verifyAlerttPresentOnCreation() throws Exception {
 		DashboardLoginPage().Dashboardlogin(
 				Dashboard_BaseData.Dashboard_Login_Username_Input,
 				Dashboard_BaseData.Dashboard_Login_Password_Input);
@@ -46,21 +47,25 @@ public class Dashboard_Login extends DashboardPageFactory {
 		Dashboard_HyattPage().selectingLocations("Hyatt Miami at The Blue");
 		Dashboard_HyattPage().selectingSources("Trip Advisor");
 		Dashboard_HyattPage().clickApplyButton();
-		String AlertName = DashboardAlertPage().addingAlert(
+		String AlertName1 = DashboardAlertPage().addingAlert(
 				Dashboard_BaseData.Dashboard_AlertName_Input, "Test Alert");
-		System.out.println("AlertName :" + AlertName);
+		System.out.println("AlertName :" + AlertName1);
 		DashboardAlertPage().verifyAlertToastMessage(
 				Dashboard_BaseData.Dashboard_AlertCreatedToastMessage_Input);
 		DashboardAlertPage().clickingCancelAlert();
 		pause(2);
 		Dashboard_HyattPage().clickingWarningButton();
-//		DashboardAlertPage().verifyAlertPresent(AlertName);
+		String AlertName2 = DashboardAlertPage()
+				.gettingValueForAddedAlertinTable();
+		System.out.println("Alertname from table:" + AlertName2);
+		pause(2);
+//		isTextMatching(AlertName1, AlertName2);
+		GlobalCommonMethods().verifyTextMatching(AlertName1, AlertName2);
 		pause(2);
 		DashboardLoginPage().dashboardLogout();
 	}
 
-	
-	public void verifyAssertNotPresentOndeletion() throws Exception {
+	public void verifyAlertNotPresentOndeletion() throws Exception {
 		DashboardLoginPage().Dashboardlogin(
 				Dashboard_BaseData.Dashboard_Login_Username_Input,
 				Dashboard_BaseData.Dashboard_Login_Password_Input);
@@ -77,7 +82,7 @@ public class Dashboard_Login extends DashboardPageFactory {
 		DashboardAlertPage().clickingCancelAlert();
 		pause(2);
 		Dashboard_HyattPage().clickingWarningButton();
-//		DashboardAlertPage().verifyAlertPresent(AlertName);
+		// DashboardAlertPage().verifyAlertPresent(AlertName);
 		pause(2);
 		DashboardLoginPage().dashboardLogout();
 	}

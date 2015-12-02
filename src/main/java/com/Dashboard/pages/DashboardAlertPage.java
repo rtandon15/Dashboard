@@ -11,7 +11,10 @@ public class DashboardAlertPage extends DashboardWebElementLocators {
 
 	public String addingAlert(String AlertName, String Description) {
 		click(Dashboard_AddAlert_Button_Locator);
-		String Alertname=type(Dashboard_AddAlert_Title_Textbox_Locator, AlertName).toString();
+		type(Dashboard_AddAlert_Title_Textbox_Locator,
+				AlertName).toString();
+//		String Alertname = getText(Dashboard_AddAlert_Title_Textbox_Locator);
+		String Alertname = getAttribute(Dashboard_AddAlert_Title_Textbox_Locator, "value").toString().trim();
 		put("Alertname", Alertname);
 		type(Dashboard_AddAlert_Description_Textbox_Locator, Description);
 		clickAndWait(Dashboard_AddAlert_SaveAlert_Button_Locator);
@@ -38,14 +41,22 @@ public class DashboardAlertPage extends DashboardWebElementLocators {
 		click(Dashboard_AddAlert_Cancel_Button_Locator);
 
 	}
-	
-	
-	
-	public void verifyAlertPresent(String AlertName)
-	{
-//		waitForElement(Dashboard_ManageAlert_Window_Locator, 3);
-		isElementPresent(AlertName);
-//		waitForTextInSection(Dashboard_ManageAlert_Window_Locator, AlertName);
+
+	public void verifyAlertPresent(String AlertName) {
+		// waitForElement(Dashboard_ManageAlert_Window_Locator, 3);
+		// isElementPresent(AlertName);
+		// waitForTextInSection(Dashboard_ManageAlert_Window_Locator,
+		// AlertName);
+		// waitForTextInSection(Dashboard_ManageAlert_Window_Locator, AlertName,
+		// 2);
+
+	}
+
+	public String gettingValueForAddedAlertinTable() {
+		String alertName = getText(Dashboard_ManageAlert_Window_Locator);
+		put("alertName", alertName);
+		return alertName;
+
 	}
 
 }

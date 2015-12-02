@@ -27,7 +27,7 @@ public class DashboardWebElementLocators extends GlobalCommonMethods {
 	public static final String Dashboard_AddAlert_SaveAlert_Button_Locator = "//*[@class='save-alert-icon']";
 	public static final String Dashboard_AddAlert_Cancel_Button_Locator = "//*[@href='javascript: void(0)']";
 	public static final String Dashboard_Warning_Button_Locator = "//*[@id='manage-alerts-command']";
-	public static final String Dashboard_ManageAlert_Window_Locator = "//*[@class='manage-alerts-table-container']";
+	public static final String Dashboard_ManageAlert_Window_Locator = "//*[@id='manage-alerts-table']/tbody/tr[last()]/td[1]";
 	
 	
 	
