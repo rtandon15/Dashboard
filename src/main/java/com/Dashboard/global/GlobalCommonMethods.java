@@ -49,7 +49,7 @@ public class GlobalCommonMethods extends Global {
 
 		Actions action = new Actions(getDriver());
 		WebElement Element = waitForElement(locator);
-		action.moveToElement(Element).build().perform();
+		action.moveToElement(Element).click().build().perform();
 	}
 
 	public void SelectNew(String locator, String VisibleText) {

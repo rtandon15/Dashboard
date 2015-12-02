@@ -12,21 +12,45 @@ public class DashboardWebElementLocators extends GlobalCommonMethods {
 	
 	// LOCATORS FOR DASHBOARD PAGE
 	public static final String Dashboard_Insight_Tab_Locator = "//li[text()='Insight']";
+	public static final String Dashboard_Launchpad_Tab_Locator = "//li[text()='Launchpad']";
 	public static final String Dashboard_Sources_Dropdown_Locator = "//input[@title='Sources (0)']";
 	public static final String Dashboard_TripAdvisor_Option_Locator = "//span[@title='Trip Advisor']";
 	public static final String Dashboard_Locations_Dropdown_Locator = "//input[@title='Locations (0)']";
 	public static final String Dashboard_ReviewValue_Number_Locator = "//*[@class='numeric r-cell']//a";
 	public static final String Dashboard_Apply_Button_Locator = "//button[@class='update-filters big-button']/span";	
 	public static final String Dashboard_Close_Review_Button_Locator = "//*[@class='close']";
+	public static final String Dashboard_SaveToLaunchpad_Button_Locator = ".//*[@id='widgets']/div[1]/div[2]/div[1]/div[2]/ul/li/a";
+	public static final String Dashboard_AddToNewLaunchpad_Textbox_Locator = "//*[@class='page-layout-new-input']";
+	public static final String Dashboard_AddNew_Button_Locator = "//*[@class='page-layout-new-command small-button']";
 	
 	// LOCATORS FOR LOGOUT PAGE
 	public static final String Dashboard_nba_Logout_Button_Locator = "//*[@id='user-actions-icon']";
 	public static final String Dashboard_nba_Logout_Link_Locator = "//*[@class='logout-command ng-binding']";
+	public static final String Dashboard_nba_Admin_Link_Locator = "//*[@class='admin']";
 	
 	public Locator Dashboard_Reviews_Message_Locator = new Locator(
 			"//section[@class='regular-language-content-container ']/article/span[contains(.,'$0')]");
 	
 	
+	//Added by Santosh
+	//LOCATORS FOR PREFERENCES
+	public static final String Dashboard_Preferences_Button_Locator = "id=preferences-command";
+	public static final String Dashboard_Preferences_FirstName_Textbox_Locator = "id=firstName";
+	public static final String Dashboard_Preferences_Apply_Button_Locator = ".//*[@id='userData']//button";
+	public static final String Dashboard_Preferences_User_Message_Info_Locator = ".//*[@id='userData']//p";
+	public static final String Dashboard_Preferences_Close_Button_Locator = "//*[@id='mainBody']//a//*[text()='close']";
+	public static final String Dashboard_UserName_Textbox_Locator = "id=user-name";
+	public static final String Dashboard_CurrentPassword_Textbox_Locator = "id=currentPassword";
+	public static final String Dashboard_NewPassword_Textbox_Locator = "id=newPassword";
+	public static final String Dashboard_VerifyPassword_Textbox_Locator = "id=verifyPassword";
+	public static final String Dashboard_Preferences_ChangePassword_Link_Locator = "//a[text()='Change Password']";
+	public static final String Dashboard_Preferences_Password_Apply_Button_Locator = ".//*[@id='password']//button";
+	public static final String Dashboard_Preferences_Password_Message_Info_Locator = ".//*[@id='password']/div[1]/div/p";
+	public static final String Dashboard_Preferences_Launchpads_Link_Locator = "//a[text()='Launchpads']";
 	
-
+	//LOCATORS FOR MAIN HOME PAGE
+	public static final String Dashboard_MainPage_User_DrpDown_Locator = "id=user-actions-icon";
+	public static final String Dashboard_MainPage_Admin_Link_Locator = ".//*[@id='user-actions']/li[1]/a";
+	
+	
 }
