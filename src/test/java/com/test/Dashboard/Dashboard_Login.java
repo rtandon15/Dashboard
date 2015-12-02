@@ -26,9 +26,9 @@ public class Dashboard_Login extends DashboardPageFactory {
 		pause(3);
 //		DashboardLoginPage().verifyReviewMessage("rooms","nice","clean","no one said it was impossible","lady in the frontdesk");
 		String ExpectedMessage=LoadProperties.reviewsValidation("HyattReview");
-		System.out.println("ExpectedReview" +ExpectedMessage);
+		System.out.println("ExpectedMessage: " + ExpectedMessage);
 		String ActualMessage=DashboardLoginPage().gettingActualReviewMessage();
-		System.out.println("ActualMessage" +ActualMessage);
+		System.out.println("ActualMessage: " + ActualMessage);
 		isTextMatching(ExpectedMessage,ActualMessage);	
 		Dashboard_HyattPage().clickCloseReview();
 		DashboardLoginPage().dashboardLogout();
