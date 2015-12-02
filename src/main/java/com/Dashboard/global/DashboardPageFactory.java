@@ -19,4 +19,8 @@ public class DashboardPageFactory extends Dashboard_URL {
 		return new Dashboard_HyattPage();
 	}
 
+	public DashboardAlertPage DashboardAlertPage() {
+		return new DashboardAlertPage();
+	}
+
 }

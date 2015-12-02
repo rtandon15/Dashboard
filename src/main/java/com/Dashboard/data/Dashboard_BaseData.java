@@ -14,5 +14,12 @@ public class Dashboard_BaseData {
 	public static final String Dashboard_Login_Username_Input = "nba";
 	public static final String Dashboard_Login_Password_Input = "spr1nkle!15";
 	
+	public static String Dashboard_AlertName_Input = "Alert_"
+			+ new DateTime(DateTimeZone.UTC).toString().replace(":", ".");
+	
+	
+	// INPUTS FOR TOAST MESSAGES
+	public static final String Dashboard_AlertCreatedToastMessage_Input = "Success";
+	
 	
 }
