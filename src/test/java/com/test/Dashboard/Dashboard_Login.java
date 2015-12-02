@@ -29,7 +29,7 @@ public class Dashboard_Login extends DashboardPageFactory {
 		System.out.println("ExpectedReview" +ExpectedMessage);
 		String ActualMessage=DashboardLoginPage().gettingActualReviewMessage();
 		System.out.println("ActualMessage" +ActualMessage);
-		isTextMatching(ExpectedMessage,ActualMessage);		
+		isTextMatching(ExpectedMessage,ActualMessage);	
 		Dashboard_HyattPage().clickCloseReview();
 		DashboardLoginPage().dashboardLogout();
 	}
