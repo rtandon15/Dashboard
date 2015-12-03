@@ -37,7 +37,7 @@ public class Dashboard_Login extends DashboardPageFactory {
 		DashboardLoginPage().dashboardLogout();
 	}
 
-	@Test(groups = { TestGroups.RegressionGroup, TestGroups.ALLGroup }, description = "The test case verifies Alert created is available under Warning. ")
+	@Test(groups = { TestGroups.RegressionGroup, TestGroups.ALLGroup }, description = "The test case verifies Alert created is available under Manage Alert. ")
 	public void verifyAlerttPresentOnCreation() throws Exception {
 		DashboardLoginPage().Dashboardlogin(
 				Dashboard_BaseData.Dashboard_Login_Username_Input,
@@ -54,18 +54,19 @@ public class Dashboard_Login extends DashboardPageFactory {
 				Dashboard_BaseData.Dashboard_AlertCreatedToastMessage_Input);
 		DashboardAlertPage().clickingCancelAlert();
 		pause(2);
-		Dashboard_HyattPage().clickingWarningButton();
+		DashboardAlertPage().clickingManageAlertButton();
 		String AlertName2 = DashboardAlertPage()
 				.gettingValueForAddedAlertinTable();
 		System.out.println("Alertname from table:" + AlertName2);
 		pause(2);
-//		isTextMatching(AlertName1, AlertName2);
+		// isTextMatching(AlertName1, AlertName2);
 		GlobalCommonMethods().verifyTextMatching(AlertName1, AlertName2);
 		pause(2);
 		DashboardLoginPage().dashboardLogout();
 	}
 
-	public void verifyAlertNotPresentOndeletion() throws Exception {
+	@Test(groups = { TestGroups.RegressionGroup, TestGroups.ALLGroup }, description = "The test case verifies Alert is removed from manage Alert table on deletion. ")
+	public void verifyAlertNotPresentOnDeletion() throws Exception {
 		DashboardLoginPage().Dashboardlogin(
 				Dashboard_BaseData.Dashboard_Login_Username_Input,
 				Dashboard_BaseData.Dashboard_Login_Password_Input);
@@ -74,17 +75,21 @@ public class Dashboard_Login extends DashboardPageFactory {
 		Dashboard_HyattPage().selectingLocations("Hyatt Miami at The Blue");
 		Dashboard_HyattPage().selectingSources("Trip Advisor");
 		Dashboard_HyattPage().clickApplyButton();
-		String AlertName = DashboardAlertPage().addingAlert(
+		String AlertName3 = DashboardAlertPage().addingAlert(
 				Dashboard_BaseData.Dashboard_AlertName_Input, "Test Alert");
-		System.out.println("AlertName :" + AlertName);
-		DashboardAlertPage().verifyAlertToastMessage(
-				Dashboard_BaseData.Dashboard_AlertCreatedToastMessage_Input);
+		System.out.println("AlertName :" + AlertName3);
 		DashboardAlertPage().clickingCancelAlert();
 		pause(2);
-		Dashboard_HyattPage().clickingWarningButton();
-		// DashboardAlertPage().verifyAlertPresent(AlertName);
-		pause(2);
+		DashboardAlertPage().clickingManageAlertButton();
+		pause(1);
+		DashboardAlertPage().deleteLastAlertFromManageAlert();
+		String AlertName4 = DashboardAlertPage()
+				.gettingValueForAddedAlertinTable();
+		System.out.println("Alertname from table:" + AlertName4);
+		GlobalCommonMethods().verifyTextNotMatching(AlertName3, AlertName4);
+		pause(1);
 		DashboardLoginPage().dashboardLogout();
+
 	}
 
 }

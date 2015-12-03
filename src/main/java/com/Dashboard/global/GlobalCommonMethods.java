@@ -314,6 +314,20 @@ public class GlobalCommonMethods extends Global {
 			return false;
 		}
 	}
+	
+	public boolean verifyTextNotMatching(String expectedText, String actualText) {
+		if (!expectedText.toLowerCase().equals(actualText.toLowerCase())) {
+			log("Actual Text : \"" + actualText + "\" doesn't match with , "
+					+ " Expected Text : \"" + expectedText + "\"",
+					TestStepType.VERIFICATION_RESULT);
+			return true;
+		} else {
+			log("Actual Text : \"" + actualText + "\" match with , "
+					+ " Expected Text : \"" + expectedText + "\"",
+					TestStepType.ERRORMESSAGE);
+			return false;
+		}
+	}
 
 	public boolean verifyTextContains(String textToCheck, String entireText) {
 		if (entireText.contains(textToCheck)) {

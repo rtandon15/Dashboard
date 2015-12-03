@@ -26,10 +26,10 @@ public class DashboardWebElementLocators extends GlobalCommonMethods {
 	public static final String Dashboard_AddAlert_Description_Textbox_Locator = "//*[@id='alert_description']";	
 	public static final String Dashboard_AddAlert_SaveAlert_Button_Locator = "//*[@class='save-alert-icon']";
 	public static final String Dashboard_AddAlert_Cancel_Button_Locator = "//*[@href='javascript: void(0)']";
-	public static final String Dashboard_Warning_Button_Locator = "//*[@id='manage-alerts-command']";
+	public static final String Dashboard_ManageAlert_Button_Locator = "//*[@id='manage-alerts-command']";
 	public static final String Dashboard_ManageAlert_Window_Locator = "//*[@id='manage-alerts-table']/tbody/tr[last()]/td[1]";
-	
-	
+	public static final String Dashboard_ManageAlert_Delete_LastButton_Locator = "//*[@id='manage-alerts-table']/tbody/tr[last()]/td[4]/div/div[2]/span";
+	public static final String Dashboard_ManageAlert_Delete_PopupButton_Locator = ".//*[@id='dData']";
 	
 	// LOCATORS FOR LOGOUT PAGE
 	public static final String Dashboard_nba_Logout_Button_Locator = "//*[@id='user-actions-icon']";

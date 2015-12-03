@@ -30,8 +30,6 @@ public class Dashboard_HyattPage extends DashboardWebElementLocators {
 		click(Dashboard_Connect_Tab_Locator);
 	}
 
-	public void clickingWarningButton() {
-		clickAndWait(Dashboard_Warning_Button_Locator);
-	}
+	
 
 }

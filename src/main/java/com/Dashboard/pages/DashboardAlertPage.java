@@ -11,10 +11,11 @@ public class DashboardAlertPage extends DashboardWebElementLocators {
 
 	public String addingAlert(String AlertName, String Description) {
 		click(Dashboard_AddAlert_Button_Locator);
-		type(Dashboard_AddAlert_Title_Textbox_Locator,
-				AlertName).toString();
-//		String Alertname = getText(Dashboard_AddAlert_Title_Textbox_Locator);
-		String Alertname = getAttribute(Dashboard_AddAlert_Title_Textbox_Locator, "value").toString().trim();
+		type(Dashboard_AddAlert_Title_Textbox_Locator, AlertName).toString();
+		// String Alertname = getText(Dashboard_AddAlert_Title_Textbox_Locator);
+		String Alertname = getAttribute(
+				Dashboard_AddAlert_Title_Textbox_Locator, "value").toString()
+				.trim();
 		put("Alertname", Alertname);
 		type(Dashboard_AddAlert_Description_Textbox_Locator, Description);
 		clickAndWait(Dashboard_AddAlert_SaveAlert_Button_Locator);
@@ -57,6 +58,15 @@ public class DashboardAlertPage extends DashboardWebElementLocators {
 		put("alertName", alertName);
 		return alertName;
 
+	}
+
+	public void clickingManageAlertButton() {
+		clickAndWait(Dashboard_ManageAlert_Button_Locator);
+	}
+
+	public void deleteLastAlertFromManageAlert() {
+		clickAndWait(Dashboard_ManageAlert_Delete_LastButton_Locator);
+		clickAndWait(Dashboard_ManageAlert_Delete_PopupButton_Locator);
 	}
 
 }
