@@ -48,8 +48,7 @@ public class GlobalCommonMethods extends Global {
 	public void hoverClick(String locator) {
 
 		Actions action = new Actions(getDriver());
-		WebElement Element = waitForElement(locator);
-		action.moveToElement(Element).click().build().perform();
+		action.moveToElement(getDriver().findElement(By.xpath(locator))).build().perform();
 	}
 
 	public void SelectNew(String locator, String VisibleText) {
@@ -435,5 +434,9 @@ public class GlobalCommonMethods extends Global {
 		     //Simple exception handling, replace with what's necessary for your use case!
 		     throw new RuntimeException("Generating file failed", e);
 		  }
+	}
+	
+	public static String randomstring(){
+		return "SGTI-" + new DateTime( DateTimeZone.UTC );
 	}
 }

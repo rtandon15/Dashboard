@@ -51,6 +51,24 @@ public class DashboardWebElementLocators extends GlobalCommonMethods {
 	//LOCATORS FOR MAIN HOME PAGE
 	public static final String Dashboard_MainPage_User_DrpDown_Locator = "id=user-actions-icon";
 	public static final String Dashboard_MainPage_Admin_Link_Locator = ".//*[@id='user-actions']/li[1]/a";
+	public static final String Dashboard_UnderAdmin_User_DrpDwn_Locator = "//div[@id='sudoUser_chzn']//div/b";
+	public static final String Dashboard_UnderAdmin_User_SecondValue_Locator = "//div[@id='usersContainer']//*[@class='chzn-results']/li[2]";
+	public static final String Dashboard_MainPage_UserNameOnTopRightCorner_Locator = "id=user-name";
+	
+	//LOCATORS FOR LOCATION PERFORMANCE ANALYSIS TABLE
+	public static final String Dashboard_LocationPerformanceAnalysis_Name_Text_Locator = "//table[@class='nbaDataTable']/tbody//tr[1]//td[1]";
+	public static final String Dashboard_LocationPerformanceAnalysis_Grade_Text_Locator = "//table[@class='nbaDataTable']/tbody//tr[1]//td[2]";
+	public static final String Dashboard_LocationPerformanceAnalysis_Rating_Text_Locator = "//table[@class='nbaDataTable']/tbody//tr[1]//td[3]";
+	public static final String Dashboard_LocationPerformanceAnalysis_Reviews_Text_Locator = "//table[@class='nbaDataTable']/tbody//tr[1]//td[4]";
+	public static final String Dashboard_LocationPerformanceAnalysis_Insights_Text_Locator = "//table[@class='nbaDataTable']/tbody//tr[1]//td[5]";
+	
+	//LOCATORS FOR SORTED LAUNCHPAD TABLE PRESENT ON HOME PAGE
+	public static final String Dashboard_AllSavedLaunchPad_Link_Text_Locator = "//div[@class='my-launchpads ui-sortable']//div";
+	
+	//LOCATORS FOR SAVE TO LAUNCHPAD FUNCTIONALITY
+	public static final String Dashboard_Success_Message_Text_Locator = "//*[text()='Success']";
+	public static final String Dashboard_RemoveFromLaunchpad_Button_Locator = "//*[@title='Remove from Launchpad']";
+	public static final String Dashboard_Delete_Confirmation_Button_Locator = "//*[@class='ui-button-text'][text()='Delete']";
 	
 	
 }
