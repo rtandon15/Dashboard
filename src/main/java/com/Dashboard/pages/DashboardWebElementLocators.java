@@ -69,6 +69,8 @@ public class DashboardWebElementLocators extends GlobalCommonMethods {
 	public static final String Dashboard_Success_Message_Text_Locator = "//*[text()='Success']";
 	public static final String Dashboard_RemoveFromLaunchpad_Button_Locator = "//*[@title='Remove from Launchpad']";
 	public static final String Dashboard_Delete_Confirmation_Button_Locator = "//*[@class='ui-button-text'][text()='Delete']";
+	public static final String Dashboard_MainPage_OpenedLaunchpad_Button_Locator = "//div[@id='launchpad-sidebar']/*[@class='launchpad-title utils-editable']";
+	public static final String Dashboard_MainPage_OpenedLaunchpad_Textbox_Locator = "//div[@id='launchpad-sidebar']/*[@class='launchpad-title utils-editable']/input";
 	
 	
 }

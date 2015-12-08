@@ -18,7 +18,6 @@ public class Dashboard_Login extends DashboardPageFactory {
 	String reviews = "";
 	String insights = "";
 	
-	public Dashboard_HyattPage daHyattPage = new Dashboard_HyattPage();
 
 	@Test(priority=1,groups = { TestGroups.RegressionGroup, TestGroups.ALLGroup }, description = "The test case verifies basic flow for dashboard ")
 	public void verifyBasicFlowForDashboard() throws Exception {
@@ -39,7 +38,7 @@ public class Dashboard_Login extends DashboardPageFactory {
 
 	}
 	
-	@Test(enabled=false,groups = { TestGroups.RegressionGroup, TestGroups.ALLGroup }, description = "Verification of save to launchpad functionality")
+	@Test(priority=2,groups = { TestGroups.RegressionGroup, TestGroups.ALLGroup }, description = "Verification of save to launchpad functionality")
 	public void verifyCRUDForSaveToLaunchPadFunctionality() throws Exception{
 		String text = "TestLaunchPad";
 		
@@ -78,6 +77,8 @@ public class Dashboard_Login extends DashboardPageFactory {
 		Dashboard_HyattPage().writeInAddToNewLaunchpad(text);
 		Dashboard_HyattPage().clickOnAddNewButton();
 		pause(6);
+		Dashboard_HyattPage().verifySuccessMessage();
+		pause(2);
 		/*
 		 * Opening the just saved filters from lauchpad tab
 		 */
@@ -103,7 +104,7 @@ public class Dashboard_Login extends DashboardPageFactory {
 		pause(10);
 	}
 	
-	@Test(description="Verification of Save to Launchpad functionality | Create a search filter on launchpad")
+	@Test(enabled=false,description="Verification of Save to Launchpad functionality | Create a search filter on launchpad")
 	public void verifySaveToLaunchpad(){
 		
 		/*
@@ -157,7 +158,7 @@ public class Dashboard_Login extends DashboardPageFactory {
 		pause(5);
 	}
 	
-	@Test(dependsOnMethods="verifySaveToLaunchpad",description="Verification of Save to Launchpad functionality | Reading latest saved search filter")
+	@Test(enabled=false,dependsOnMethods="verifySaveToLaunchpad",description="Verification of Save to Launchpad functionality | Reading latest saved search filter")
 	public void verifySavedLaunchpadShowingSameResult(){
 		/*
 		 * Login to application
@@ -196,7 +197,7 @@ public class Dashboard_Login extends DashboardPageFactory {
 		pause(10);
 	}
 	
-	@Test(description="Verification of Save to Launchpad functionality | Deleting latest saved search filter")
+	@Test(enabled=false,description="Verification of Save to Launchpad functionality | Deleting latest saved search filter")
 	public void verifyDeleteLatestSavedLaunchpad(){
 		/*
 		 * Login to application
@@ -257,7 +258,7 @@ public class Dashboard_Login extends DashboardPageFactory {
 		pause(2);
 	}
 	
-	@Test(description="To verify change of user")
+	@Test(enabled=false,description="To verify change of user")
 	public void verifyChangeOfUser(){
 		/*
 		 * Login to application
