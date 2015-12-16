@@ -24,8 +24,8 @@ public class Dashboard_Login extends DashboardPageFactory {
 		Dashboard_HyattPage().clickApplyButton();
 		Dashboard_HyattPage().clickingReviewValue();
 		pause(3);
-		DashboardLoginPage().verifyReviewMessage("rooms", "nice", "clean",
-				"no one said it was impossible", "lady in the frontdesk");
+		// DashboardLoginPage().verifyReviewMessage("rooms", "nice", "clean",
+		// "no one said it was impossible", "lady in the frontdesk");
 		String ExpectedMessage = LoadProperties
 				.reviewsValidation("HyattReview");
 		System.out.println("ExpectedMessage: " + ExpectedMessage);
@@ -89,6 +89,19 @@ public class Dashboard_Login extends DashboardPageFactory {
 		GlobalCommonMethods().verifyTextNotMatching(AlertName3, AlertName4);
 		pause(1);
 		DashboardLoginPage().dashboardLogout();
+
+	}
+
+	@Test(groups = { TestGroups.RegressionGroup, TestGroups.ALLGroup }, description = "The test case verifies newly created Launchpad appears at the bottom of Dashboard application. ")
+	public void verifyNewlyCreatedLaunchpad() throws Exception {
+		DashboardLoginPage().Dashboardlogin(
+				Dashboard_BaseData.Dashboard_Login_Username_Input,
+				Dashboard_BaseData.Dashboard_Login_Password_Input);
+		pause(3);
+		Dashboard_HyattPage().clickingInsightTab();
+		Dashboard_HyattPage().clickSourcesTab();
+		pause(1);
+		Dashboard_HyattPage().newLaunchPad();
 
 	}
 

@@ -50,7 +50,7 @@ public class GlobalCommonMethods extends Global {
 	public void hoverClick(String locator) {
 
 		Actions action = new Actions(getDriver());
-		WebElement Element = waitForElement(locator);
+		WebElement Element = null; // waitForElement(locator);
 		action.moveToElement(Element).build().perform();
 	}
 
