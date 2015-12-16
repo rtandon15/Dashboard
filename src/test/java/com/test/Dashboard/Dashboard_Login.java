@@ -25,12 +25,14 @@ public class Dashboard_Login extends DashboardPageFactory {
 		Dashboard_HyattPage().clickingReviewValue();
 		pause(3);
 
-//		DashboardLoginPage().verifyReviewMessage("rooms","nice","clean","no one said it was impossible","lady in the frontdesk");
-		String ExpectedMessage=LoadProperties.reviewsValidation("HyattReview");
+		// DashboardLoginPage().verifyReviewMessage("rooms","nice","clean","no one said it was impossible","lady in the frontdesk");
+		String ExpectedMessage = LoadProperties
+				.reviewsValidation("HyattReview");
 		System.out.println("ExpectedMessage: " + ExpectedMessage);
-		String ActualMessage=DashboardLoginPage().gettingActualReviewMessage();
+		String ActualMessage = DashboardLoginPage()
+				.gettingActualReviewMessage();
 		System.out.println("ActualMessage: " + ActualMessage);
-		isTextMatching(ExpectedMessage,ActualMessage);	
+		isTextMatching(ExpectedMessage, ActualMessage);
 		Dashboard_HyattPage().clickCloseReview();
 		DashboardLoginPage().dashboardLogout();
 	}
@@ -100,7 +102,7 @@ public class Dashboard_Login extends DashboardPageFactory {
 		Dashboard_HyattPage().clickSourcesTab();
 		pause(1);
 		Dashboard_HyattPage().newLaunchPad();
-
+		// not completed at this moment
 	}
 
 }
