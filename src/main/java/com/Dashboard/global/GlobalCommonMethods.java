@@ -50,7 +50,7 @@ public class GlobalCommonMethods extends Global {
 	public void hoverClick(String locator) {
 
 		Actions action = new Actions(getDriver());
-		WebElement Element = waitForElement(locator);
+		WebElement Element = null; // waitForElement(locator);
 		action.moveToElement(Element).build().perform();
 	}
 
@@ -309,6 +309,20 @@ public class GlobalCommonMethods extends Global {
 			return true;
 		} else {
 			log("Actual Text : \"" + actualText + "\" doesn't match with , "
+					+ " Expected Text : \"" + expectedText + "\"",
+					TestStepType.ERRORMESSAGE);
+			return false;
+		}
+	}
+	
+	public boolean verifyTextNotMatching(String expectedText, String actualText) {
+		if (!expectedText.toLowerCase().equals(actualText.toLowerCase())) {
+			log("Actual Text : \"" + actualText + "\" doesn't match with , "
+					+ " Expected Text : \"" + expectedText + "\"",
+					TestStepType.VERIFICATION_RESULT);
+			return true;
+		} else {
+			log("Actual Text : \"" + actualText + "\" match with , "
 					+ " Expected Text : \"" + expectedText + "\"",
 					TestStepType.ERRORMESSAGE);
 			return false;
