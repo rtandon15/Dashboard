@@ -102,7 +102,7 @@ public class Dashboard_Login extends DashboardPageFactory {
 		Dashboard_HyattPage().clickSourcesTab();
 		pause(1);
 		Dashboard_HyattPage().newLaunchPad();
-		// not completed at this moment
+		// not completed at this moment because of hover issue
 	}
 
 }
