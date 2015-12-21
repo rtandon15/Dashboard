@@ -55,4 +55,11 @@ public class DashboardLoginPage extends DashboardWebElementLocators {
 		Assert.assertEquals(actual, expected);
 	}
 	
+	public String gettingActualReviewMessage() {
+	//  String ActualMessage = getAttribute(Dashboard_Review1_Locator, "value").toString().trim();
+	  String ActualMessage = getText(Dashboard_Review1_Locator);
+	  put("ActualMessage", ActualMessage);
+	  return ActualMessage;
+	 }
+	
 }

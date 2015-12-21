@@ -35,12 +35,12 @@ public class DashboardPageFactory extends Dashboard_URL {
 		return new ConnectPage();
 	}
 	
-	public PulsePage PulsePage() {
-		return new PulsePage();
-	}
-	
 	public PreferencesAndOtherTabsPage PreferencesAndOtherTabsPage() {
 		return new PreferencesAndOtherTabsPage();
+	}
+
+	public DashboardAlertPage DashboardAlertPage() {
+		return new DashboardAlertPage();
 	}
 
 }

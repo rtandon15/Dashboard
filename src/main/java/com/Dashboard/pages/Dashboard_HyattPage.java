@@ -1,9 +1,11 @@
 package com.Dashboard.pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import net.sourceforge.htmlunit.corejs.javascript.Function;
+import com.Dashboard.data.Dashboard_BaseData;
+import com.Dashboard.global.GlobalCommonMethods;
 
 public class Dashboard_HyattPage extends DashboardWebElementLocators {
 
@@ -147,5 +149,38 @@ public class Dashboard_HyattPage extends DashboardWebElementLocators {
 		String newName = getText(Dashboard_MainPage_UserNameOnTopRightCorner_Locator);
 		System.out.println("newName: "+newName);
 		Assert.assertNotEquals(newName, currentName);
+	}
+
+	public void clickConnectTab() {
+		click(Dashboard_Connect_Tab_Locator);
+	}
+
+	public void clickSourcesTab() {
+		clickAndWait(Dashboard_Sources_Tab_Locator);
+	}
+
+	public void addingNewLaunchpad() {
+		click(Dashboard_SourceDistribution_SlideButton_Locator);
+		pause(1);
+		clickAndWait(Dashboard_SaveToLaunchpad_Button_Locator);
+
+	}
+
+	public void newLaunchPad() {
+
+		// js.executeScript("arguments[0].click();",
+		// Dashboard_SaveToLaunchpad_Button_Locator);
+
+		// js.executeScript("document.getElementsByClassName('small-button save-to-launchpad-command icon-tasks'[0].click())");
+		// js.executeScript("arguments[0].scrollIntoView()",
+		// Dashboard_SaveToLaunchpad_Button_Locator);
+
+		// js.executeScript("arguments[0].click();",
+		// Dashboard_SaveToLaunchpad_Button_Locator);
+		hoverClick(Dashboard_SaveToLaunchpad_Button_Locator);
+		type(Dashboard_AddToNewLaunchpad_Textbox_Locator,
+				Dashboard_BaseData.Dashboard_AddNewLaunchpad_Input);
+		click(Dashboard_AddNew_Button_Locator);
+
 	}
 }

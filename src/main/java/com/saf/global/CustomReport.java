@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -13,9 +14,9 @@ import com.saf.util.Reasons;
 
 
 public class CustomReport extends ActionMethods{
-	private WebDriver driver;
+	protected WebDriver driver;
 	
-
+	protected JavascriptExecutor js = (JavascriptExecutor)getDriver();
 	
 	
 
@@ -57,6 +58,8 @@ public class CustomReport extends ActionMethods{
 			log.error(sTestcaseName+" :: "+"FAILED");
 		}
 	}
+	
+	
 	
 	public void VerifyUrls(String sExpected, String sActual, List<String> statusValue, WebDriver driver, String sTestcaseName) {
 		this.driver = driver;
