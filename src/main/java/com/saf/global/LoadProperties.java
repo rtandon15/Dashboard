@@ -8,8 +8,7 @@ import java.util.Properties;
 public class LoadProperties {
 
 	private static Properties parameters;
-	
-	public static Properties ReviewProperty=null;
+	private static Properties ReviewProperty;
 
 	
 	public static boolean STOP_FOR_SOFT_ASSERTIONS=Boolean.parseBoolean(getProperty("stopForSoftAssertions", "true"));
@@ -54,23 +53,24 @@ public class LoadProperties {
 		}
 		return parameters.getProperty(key, defaultValue);
 	}
-	
-	public static String reviewsValidation(String key) {
-		if (ReviewProperty == null) {
-			try {
-				ReviewProperty = new Properties();
-				ReviewProperty.load(new FileReader("ReviewsValidate.properties"));
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-		return ReviewProperty.getProperty(key);
-	}
 
 	public static String getProperty(String key) {
 		return getProperty(key, key);
 	}
+	
+	public static String reviewsValidation(String key) {
+
+		if (ReviewProperty == null) {
+		   try {
+		    ReviewProperty = new Properties();
+		    ReviewProperty.load(new FileReader("ReviewsValidate.properties"));
+		   } catch (FileNotFoundException e) {
+		    e.printStackTrace();
+		   } catch (IOException e) {
+		    e.printStackTrace();
+		   }
+		  }
+		  return ReviewProperty.getProperty(key);
+		 }
 
 }

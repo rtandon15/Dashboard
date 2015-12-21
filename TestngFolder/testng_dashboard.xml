@@ -9,16 +9,15 @@
 		<listener class-name="com.saf.testng.MTestListener" />
 	</listeners>
 
-	<test name="Dashboard_RegressionTest">
+	<test name="Dashboard_UI_Automation_Demo">
 		<groups>
 			<run>
 				<include name="ALLGroup"></include>
 			</run>
 		</groups>
-		<packages>
-			<package name="com.test.Dashboard.*">
-			</package>
-		</packages>
+		<classes>
+     		<class name="com.test.Dashboard.Dashboard_Login"/> 
+		</classes>
 
 	</test>
 

@@ -3,7 +3,6 @@ package com.Dashboard.global;
 import java.awt.AWTException;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
@@ -17,7 +16,6 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Properties;
 import java.util.Random;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -48,10 +46,8 @@ public class GlobalCommonMethods extends Global {
 	}
 
 	public void hoverClick(String locator) {
-
 		Actions action = new Actions(getDriver());
-		WebElement Element = null; // waitForElement(locator);
-		action.moveToElement(Element).build().perform();
+		action.moveToElement(getDriver().findElement(By.xpath(locator))).build().perform();
 	}
 
 	public void SelectNew(String locator, String VisibleText) {
@@ -69,19 +65,6 @@ public class GlobalCommonMethods extends Global {
 		tDate = dateFormat.format(date);
 		return tDate;
 	}
-	
-	Properties prop = new Properties();
-
-	public Properties loadProperties() {
-		try {
-			// load a properties file
-			prop.load(new FileInputStream("Reviews-Validate.properties"));
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		}
-		return prop;
-	}
-
 
 	// CLOSING THE WINDOW AND BEING SWITCHED BACK TO SPECIFIED WINDOW
 	public void ClosingNewWindowAndSwitchBack(String Winhandle) {
@@ -464,5 +447,9 @@ public class GlobalCommonMethods extends Global {
 		     //Simple exception handling, replace with what's necessary for your use case!
 		     throw new RuntimeException("Generating file failed", e);
 		  }
+	}
+	
+	public static String randomstring(){
+		return "SGTI-" + new DateTime( DateTimeZone.UTC );
 	}
 }
