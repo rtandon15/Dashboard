@@ -21,7 +21,7 @@ public class DashboardWebElementLocators extends GlobalCommonMethods {
 	public static final String Dashboard_Apply_Button_Locator = "//button[@class='update-filters big-button']/span";
 	public static final String Dashboard_Close_Review_Button_Locator = "//*[@class='close']";
 
-//	public static final String Dashboard_SaveToLaunchpad_Button_Locator = ".//*[@id='widgets']/div[1]/div[2]/div[1]/div[2]/ul/li/a";
+	public static final String Dashboard_SaveToLaunchpad_Button_Locator = ".//*[@id='widgets']/div[1]/div[2]/div[1]/div[2]/ul/li/a";
 	public static final String Dashboard_AddToNewLaunchpad_Textbox_Locator = "//*[@class='page-layout-new-input']";
 	public static final String Dashboard_AddNew_Button_Locator = "//*[@class='page-layout-new-command small-button']";
 	
@@ -85,9 +85,10 @@ public class DashboardWebElementLocators extends GlobalCommonMethods {
 	public static final String Dashboard_ManageAlert_Window_Locator = "//*[@id='manage-alerts-table']/tbody/tr[last()]/td[1]";
 	public static final String Dashboard_ManageAlert_Delete_LastButton_Locator = "//*[@id='manage-alerts-table']/tbody/tr[last()]/td[4]/div/div[2]/span";
 	public static final String Dashboard_ManageAlert_Delete_PopupButton_Locator = ".//*[@id='dData']";
+	public static final String Dashboard_Launchpad_Present_Locator = "//div[@class='my-launchpads ui-sortable']//div[last()]";
 
 	public static final String Dashboard_Sources_Tab_Locator = "//li[@data-page-id='@{@page.id}'][3]";
-	public static final String Dashboard_SaveToLaunchpad_Button_Locator = "//div[@class='header ui-helper-clearfix']/div[@class='actions']//li/a[@title='Save to Launchpad']";
+//	public static final String Dashboard_SaveToLaunchpad_Button_Locator = "//div[@class='header ui-helper-clearfix']/div[@class='actions']//li/a[@title='Save to Launchpad']";
 	public static final String Dashboard_ShowNavigator_Button_Locator = "//*[@class='ui-slider-handle ui-state-default ui-corner-all']";
 	public static final String Dashboard_SourceDistribution_SlideButton_Locator = "//*[@class='sources-slider c-b ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all']";
 

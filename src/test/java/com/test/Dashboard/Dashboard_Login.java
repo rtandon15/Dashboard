@@ -12,20 +12,20 @@ import com.saf.global.LoadProperties;
 import org.testng.Assert;
 
 public class Dashboard_Login extends DashboardPageFactory {
-	
+
 	String testLaunchpad = randomstring();
 	String name = "";
 	String grade = "";
 	String rating = "";
 	String reviews = "";
 	String insights = "";
-	
 
-	@Test(priority=1,groups = { TestGroups.RegressionGroup, TestGroups.ALLGroup }, description = "The test case verifies basic flow for dashboard ")
+	@Test(priority = 1, groups = { TestGroups.RegressionGroup,
+			TestGroups.ALLGroup }, description = "The test case verifies basic flow for dashboard ")
 	public void verifyBasicFlowForDashboard() throws Exception {
 		DashboardLoginPage().Dashboardlogin(
-		Dashboard_BaseData.Dashboard_Login_Username_Input,
-		Dashboard_BaseData.Dashboard_Login_Password_Input);
+				Dashboard_BaseData.Dashboard_Login_Username_Input,
+				Dashboard_BaseData.Dashboard_Login_Password_Input);
 		pause(3);
 		Dashboard_HyattPage().clickingInsightTab();
 		Dashboard_HyattPage().selectingLocations("Hyatt Miami at The Blue");
@@ -47,17 +47,18 @@ public class Dashboard_Login extends DashboardPageFactory {
 		DashboardLoginPage().dashboardLogout();
 
 	}
-	
-	@Test(priority=2,groups = { TestGroups.RegressionGroup, TestGroups.ALLGroup }, description = "Verification of save to launchpad functionality")
-	public void verifyCRUDForSaveToLaunchPadFunctionality() throws Exception{
+
+	@Test(priority = 2, groups = { TestGroups.RegressionGroup,
+			TestGroups.ALLGroup }, description = "Verification of save to launchpad functionality")
+	public void verifyCRUDForSaveToLaunchPadFunctionality() throws Exception {
 		String text = "TestLaunchPad";
-		
+
 		/*
 		 * Login to application
 		 */
 		DashboardLoginPage().Dashboardlogin(
-		Dashboard_BaseData.Dashboard_Login_Username_Input,
-		Dashboard_BaseData.Dashboard_Login_Password_Input);
+				Dashboard_BaseData.Dashboard_Login_Username_Input,
+				Dashboard_BaseData.Dashboard_Login_Password_Input);
 		pause(2);
 		/*
 		 * Applying filters on Insight tab
@@ -75,8 +76,10 @@ public class Dashboard_Login extends DashboardPageFactory {
 		String rating = getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Rating_Text_Locator);
 		String reviews = getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Reviews_Text_Locator);
 		String insights = getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Insights_Text_Locator);
-		System.out.println("name: "+name+"\n grade: "+grade+"\n rating: "+rating+"\n reviews: "+reviews+"\n insight: "+insights);
-		
+		System.out.println("name: " + name + "\n grade: " + grade
+				+ "\n rating: " + rating + "\n reviews: " + reviews
+				+ "\n insight: " + insights);
+
 		/*
 		 * Saving this filter to launch pad
 		 */
@@ -96,33 +99,43 @@ public class Dashboard_Login extends DashboardPageFactory {
 		pause(15);
 		Dashboard_HyattPage().clickOnLatestSavedLaunchpad();
 		pause(3);
-		
+
 		/*
 		 * Verification if same result is displayed
 		 */
-		Assert.assertEquals(getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Name_Text_Locator), name);
+		Assert.assertEquals(
+				getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Name_Text_Locator),
+				name);
 		log("Name is verified");
-		Assert.assertEquals(getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Grade_Text_Locator), grade);
+		Assert.assertEquals(
+				getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Grade_Text_Locator),
+				grade);
 		log("Grade is verified");
-		Assert.assertEquals(getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Rating_Text_Locator), rating);
+		Assert.assertEquals(
+				getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Rating_Text_Locator),
+				rating);
 		log("Rating is verified");
-		Assert.assertEquals(getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Reviews_Text_Locator), reviews);
+		Assert.assertEquals(
+				getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Reviews_Text_Locator),
+				reviews);
 		log("Reviews is verified");
-		Assert.assertEquals(getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Insights_Text_Locator), insights);
+		Assert.assertEquals(
+				getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Insights_Text_Locator),
+				insights);
 		log("Insights is verified");
-		
+
 		pause(10);
 	}
-	
-	@Test(enabled=false,description="Verification of Save to Launchpad functionality | Create a search filter on launchpad")
-	public void verifySaveToLaunchpad(){
-		
+
+	@Test(enabled = false, description = "Verification of Save to Launchpad functionality | Create a search filter on launchpad")
+	public void verifySaveToLaunchpad() {
+
 		/*
 		 * Login to application
 		 */
 		DashboardLoginPage().Dashboardlogin(
-		Dashboard_BaseData.Dashboard_Login_Username_Input,
-		Dashboard_BaseData.Dashboard_Login_Password_Input);
+				Dashboard_BaseData.Dashboard_Login_Username_Input,
+				Dashboard_BaseData.Dashboard_Login_Password_Input);
 		pause(2);
 		/*
 		 * Applying filters on Insight tab
@@ -140,8 +153,10 @@ public class Dashboard_Login extends DashboardPageFactory {
 		rating = getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Rating_Text_Locator);
 		reviews = getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Reviews_Text_Locator);
 		insights = getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Insights_Text_Locator);
-		System.out.println("name: "+name+"\n grade: "+grade+"\n rating: "+rating+"\n reviews: "+reviews+"\n insight: "+insights);
-		
+		System.out.println("name: " + name + "\n grade: " + grade
+				+ "\n rating: " + rating + "\n reviews: " + reviews
+				+ "\n insight: " + insights);
+
 		/*
 		 * Saving this filter to launch pad
 		 */
@@ -152,13 +167,13 @@ public class Dashboard_Login extends DashboardPageFactory {
 		Dashboard_HyattPage().writeInAddToNewLaunchpad(testLaunchpad);
 		Dashboard_HyattPage().clickOnAddNewButton();
 		pause(6);
-		
+
 		/*
 		 * Verifying successful message
 		 */
 		Dashboard_HyattPage().verifySuccessMessage();
 		pause(2);
-		
+
 		/*
 		 * Verifying the same search filter is saved on launchpad
 		 */
@@ -167,17 +182,17 @@ public class Dashboard_Login extends DashboardPageFactory {
 		Dashboard_HyattPage().verifySavedLaunchpad(testLaunchpad);
 		pause(5);
 	}
-	
-	@Test(enabled=false,dependsOnMethods="verifySaveToLaunchpad",description="Verification of Save to Launchpad functionality | Reading latest saved search filter")
-	public void verifySavedLaunchpadShowingSameResult(){
+
+	@Test(enabled = false, dependsOnMethods = "verifySaveToLaunchpad", description = "Verification of Save to Launchpad functionality | Reading latest saved search filter")
+	public void verifySavedLaunchpadShowingSameResult() {
 		/*
 		 * Login to application
 		 */
 		DashboardLoginPage().Dashboardlogin(
-		Dashboard_BaseData.Dashboard_Login_Username_Input,
-		Dashboard_BaseData.Dashboard_Login_Password_Input);
+				Dashboard_BaseData.Dashboard_Login_Username_Input,
+				Dashboard_BaseData.Dashboard_Login_Password_Input);
 		pause(2);
-		
+
 		/*
 		 * Make sure to be on Launchpad tab
 		 */
@@ -186,75 +201,89 @@ public class Dashboard_Login extends DashboardPageFactory {
 		/*
 		 * Opening the just saved filters from lauchpad tab
 		 */
-		
+
 		Dashboard_HyattPage().clickOnLatestSavedLaunchpad();
 		pause(3);
-		
+
 		/*
 		 * Verification if same result is displayed
 		 */
-		Assert.assertEquals(getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Name_Text_Locator), name);
+		Assert.assertEquals(
+				getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Name_Text_Locator),
+				name);
 		log("Name is verified");
-		Assert.assertEquals(getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Grade_Text_Locator), grade);
+		Assert.assertEquals(
+				getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Grade_Text_Locator),
+				grade);
 		log("Grade is verified");
-		Assert.assertEquals(getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Rating_Text_Locator), rating);
+		Assert.assertEquals(
+				getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Rating_Text_Locator),
+				rating);
 		log("Rating is verified");
-		Assert.assertEquals(getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Reviews_Text_Locator), reviews);
+		Assert.assertEquals(
+				getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Reviews_Text_Locator),
+				reviews);
 		log("Reviews is verified");
-		Assert.assertEquals(getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Insights_Text_Locator), insights);
+		Assert.assertEquals(
+				getText(DashboardWebElementLocators.Dashboard_LocationPerformanceAnalysis_Insights_Text_Locator),
+				insights);
 		log("Insights is verified");
-		
+
 		pause(10);
 	}
-	
-	@Test(enabled=false,description="Verification of Save to Launchpad functionality | Deleting latest saved search filter")
-	public void verifyDeleteLatestSavedLaunchpad(){
+
+	@Test(enabled = false, description = "Verification of Save to Launchpad functionality | Deleting latest saved search filter")
+	public void verifyDeleteLatestSavedLaunchpad() {
 		/*
 		 * Login to application
 		 */
 		DashboardLoginPage().Dashboardlogin(
-		Dashboard_BaseData.Dashboard_Login_Username_Input,
-		Dashboard_BaseData.Dashboard_Login_Password_Input);
+				Dashboard_BaseData.Dashboard_Login_Username_Input,
+				Dashboard_BaseData.Dashboard_Login_Password_Input);
 		pause(2);
-		
+
 		/*
 		 * Make sure to be on Launchpad tab
 		 */
 		Dashboard_HyattPage().clickingLaunchpadTab();
 		pause(5);
-		
+
 		/*
 		 * Deleting the latest saved launchpad
 		 */
 		Dashboard_HyattPage().deleteLatestSavedLaunchpadAndVerifyDeletion();
 	}
-	
-	@Test(enabled=false,groups = { TestGroups.RegressionGroup, TestGroups.ALLGroup }, description="To verify preferences functionality by changing the first name")
-	public void verifyPreferencesByChangingUserData(){
+
+	@Test(enabled = false, groups = { TestGroups.RegressionGroup,
+			TestGroups.ALLGroup }, description = "To verify preferences functionality by changing the first name")
+	public void verifyPreferencesByChangingUserData() {
 		String name = "nba";
 		String expectedMessage = "Info:User details changed successfully";
 		DashboardLoginPage().Dashboardlogin(
-		Dashboard_BaseData.Dashboard_Login_Username_Input,
-		Dashboard_BaseData.Dashboard_Login_Password_Input);
+				Dashboard_BaseData.Dashboard_Login_Username_Input,
+				Dashboard_BaseData.Dashboard_Login_Password_Input);
 		pause(3);
 		Dashboard_HyattPage().clickingInsightTab();
 		Dashboard_HyattPage().clickingOnPreferences();
 		Dashboard_HyattPage().writeInFirstName(name);
-		Dashboard_HyattPage().clickingOnPreferencesApply(DashboardWebElementLocators.Dashboard_Preferences_Apply_Button_Locator);
+		Dashboard_HyattPage()
+				.clickingOnPreferencesApply(
+						DashboardWebElementLocators.Dashboard_Preferences_Apply_Button_Locator);
 		Dashboard_HyattPage().verifyInfoMessageForUserData(expectedMessage);
 		Dashboard_HyattPage().closePreferencesWindow();
 		Dashboard_HyattPage().verifyUserName(name);
 		pause(3);
-		
+
 	}
-	
-	@Test(enabled=false,groups = { TestGroups.RegressionGroup, TestGroups.ALLGroup }, description="To verify preferences functionality by changing the password")
-	public void verifyPreferencesByChangingPassword(){
+
+	@Test(enabled = false, groups = { TestGroups.RegressionGroup,
+			TestGroups.ALLGroup }, description = "To verify preferences functionality by changing the password")
+	public void verifyPreferencesByChangingPassword() {
 		String currentPassword = "spr1nkle!15";
 		String expectedMessage = "Info:Password changed successfully";
 		DashboardLoginPage().Dashboardlogin(
-		Dashboard_BaseData.Dashboard_Login_Username_Input,
-		Dashboard_BaseData.Dashboard_Login_Password_Input);
+				Dashboard_BaseData.Dashboard_Login_Username_Input,
+				Dashboard_BaseData.Dashboard_Login_Password_Input);
 		pause(3);
 		Dashboard_HyattPage().clickingInsightTab();
 		Dashboard_HyattPage().clickingOnPreferences();
@@ -262,31 +291,34 @@ public class Dashboard_Login extends DashboardPageFactory {
 		Dashboard_HyattPage().writeInCurrentPassword(currentPassword);
 		Dashboard_HyattPage().writeInNewPassword(currentPassword);
 		Dashboard_HyattPage().writeInVerifyPassword(currentPassword);
-		Dashboard_HyattPage().clickingOnPreferencesApply(DashboardWebElementLocators.Dashboard_Preferences_Password_Apply_Button_Locator);
+		Dashboard_HyattPage()
+				.clickingOnPreferencesApply(
+						DashboardWebElementLocators.Dashboard_Preferences_Password_Apply_Button_Locator);
 		pause(3);
-		Dashboard_HyattPage().verifyInfoMessageForPasswordChange(expectedMessage);
+		Dashboard_HyattPage().verifyInfoMessageForPasswordChange(
+				expectedMessage);
 		pause(2);
 	}
-	
-	@Test(enabled=false,description="To verify change of user")
-	public void verifyChangeOfUser(){
+
+	@Test(enabled = false, description = "To verify change of user")
+	public void verifyChangeOfUser() {
 		/*
 		 * Login to application
 		 */
 		DashboardLoginPage().Dashboardlogin(
-		Dashboard_BaseData.Dashboard_Login_Username_Input,
-		Dashboard_BaseData.Dashboard_Login_Password_Input);
+				Dashboard_BaseData.Dashboard_Login_Username_Input,
+				Dashboard_BaseData.Dashboard_Login_Password_Input);
 		pause(3);
-		
+
 		/*
 		 * Open Admin tab
 		 */
 		Dashboard_HyattPage().openingAdminTabUnderUserName();
-		
+
 		/*
 		 * Change user and verify
 		 */
-		
+
 		Dashboard_HyattPage().changeUserAndVerify();
 		pause(5);
 	}
@@ -355,8 +387,16 @@ public class Dashboard_Login extends DashboardPageFactory {
 		Dashboard_HyattPage().clickingInsightTab();
 		Dashboard_HyattPage().clickSourcesTab();
 		pause(1);
-		Dashboard_HyattPage().newLaunchPad();
-		// not completed at this moment because of hover issue
+		String launchpadName = Dashboard_HyattPage().newLaunchPad(
+				Dashboard_BaseData.Dashboard_AddNewLaunchpad_Input);
+		System.out.println("LaunchpadName -" + launchpadName);
+		DashboardAlertPage().verifyAlertToastMessage(
+				Dashboard_BaseData.Dashboard_AlertCreatedToastMessage_Input);
+		Dashboard_HyattPage().clickingLaunchpadTab();
+		Dashboard_HyattPage().verifyNewlyCreatedLaunchpadPresentonDashboard(launchpadName);
+		pause(1);
+		DashboardLoginPage().dashboardLogout();
+
 	}
 
 }
